@@ -85,3 +85,114 @@ nav {
     color: var(--white);
     white-space: nowrap;
 }
+
+header {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 4rem 1rem;
+}
+
+.header-image {
+    overflow: hidden;
+}
+
+.header-image img {
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.header-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header-content p {
+    margin-bottom: 2rem;
+    font-size: 500;
+    line-height: 1.75rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header-btn {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.header-btn button {
+   padding: 1rem 1.5rem;
+   outline: none; 
+   border: none;
+   font-size: 1rem;
+   font-weight: 600;
+   color: var(--white);
+   background-color: var(--primary-color);
+   border-radius: 5rem;
+   transition: 0.3s;
+   cursor: pointer;
+}
+
+@media (width > 768px) {
+    nav {
+        position: static;
+        padding: 2rem 1rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-header {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav-logo a img {
+        max-width: 125px;
+
+    }
+
+    .nav-logo .logo-dark {
+        display: flex;
+    }
+
+    .nav-logo .logo-white {
+        display: none;
+    }
+
+    .nav-menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+
+    .nav-links a {
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+}
