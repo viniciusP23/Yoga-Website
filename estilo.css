@@ -117,6 +117,7 @@ header {
     line-height: 4.5rem;
     color: var(--text-dark);
     text-align: center;
+    text-transform: capitalize;
 }
 
 .header-content p {
@@ -144,6 +145,30 @@ header {
    transition: 0.3s;
    cursor: pointer;
 }
+
+.header-btn button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-socials a {
+    padding: 8px 10px;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.header-socials a:hover {
+    background-color: var(--primary-color-dark);
+}
+
 
 @media (width > 768px) {
     nav {
@@ -194,5 +219,22 @@ header {
 
     .nav-links a:hover {
         color: var(--primary-color);
+    }
+
+    header {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .header-content {
+        grid-area: 1/1/2/2;
+    }
+
+    .header-content :is(h2, h1, p, .header-btn) {
+        text-align: left;
+    }
+
+    .header-socials {
+        justify-content: flex-start;
     }
 }
